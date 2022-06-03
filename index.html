@@ -13,11 +13,10 @@
     <!-- AOS -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
     <!-- CSS -->
-    <link rel="stylesheet" href="public/css/style.css">
-    <script src="/public/js/main.js"></script>
+    <link rel="stylesheet" href="./public/css/style.css">
 
     <!-- Fav Icon -->
-    <link rel="shortcut icon" href="/public/images/fav.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./public/images/fav.svg" type="image/x-icon">
     <title>Aerochain Launchpad</title>
 </head>
 
@@ -31,7 +30,8 @@
                 <img src="./public/images/icon.svg" alt="" class="h-14">
                 <div class="">
                     <form>
-                        <button type="button" onclick="connect()" class="btn btn-light flex flex-nowrap" id="address">Connect Wallet</button>
+                        <button type="button" onclick="connect()" class="btn btn-light flex flex-nowrap"
+                            id="address">Connect Wallet</button>
                     </form>
                 </div>
             </div>
@@ -39,17 +39,18 @@
     </header>
 
     <!-- Main Content -->
-    <main class="pt-12">
+    <main class="pt-12 container">
 
         <div class="py-6 px-3 card card-secondary max-w-2xl mx-auto">
             <div class="card-body">
-                
+
                 <section id="signUp" class="flex flex-col gap-8">
                     <div class="form-group">
                         <label for="" class="form-label">Contract Token</label>
-                        <div class="flex">
-                            <input type="text" name="sc_input" id="contract_token" class="form-control" placeholder="Enter contract token...">
-                            <button onclick="AnyTokenConnection()" class="btn w-1/4">Check Token</button>
+                        <div class="flex flex-col sm:flex-row">
+                            <input type="text" name="sc_input" id="contract_token" class="form-control"
+                                placeholder="Enter contract token...">
+                            <button onclick="AnyTokenConnection()" class="btn sm:w-2/5">Check Token</button>
                         </div>
                     </div>
 
@@ -58,14 +59,18 @@
                         <span class="t_name"></span>
                     </div>
 
-                    <button type="button" onclick="approvePreSale()" class="btn btn-primary flex items-center justify-center" id="btnApprove"><span id="loader1" style="display: none;"><img src="/public/images/load-white.gif" alt="" class="w-6 h-6"></span> <span id="text1">Approve</span></button>
+                    <button type="button" onclick="approvePreSale()"
+                        class="btn btn-primary flex items-center justify-center" id="btnApprove">Approve</button>
                 </section>
 
                 <section id="signIn" class="hidden flex-col gap-8">
+                    <button class="w-fit text-sm" onclick="changeToSignUp()"><i class="fas fa-angle-left"></i>
+                        Back</button>
                     <div class="form-group">
                         <label for="" class="form-label">Smart Contract</label>
                         <div class="flex">
-                            <input type="text" name="sc_input" id="smartcontract" class="form-control" placeholder="Enter your smartcontract...">
+                            <input type="text" name="sc_input" id="smartcontract" class="form-control"
+                                placeholder="Enter your smartcontract...">
                             <button onclick="AnyTokenConnection()" class="btn w-2/5">Check SmartContract</button>
                         </div>
                     </div>
@@ -75,7 +80,8 @@
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label">Presale Rate</label>
-                        <input type="text" name="Presale-rate" id="Presale-rate" class="form-control" placeholder="Enter your presale rate...">
+                        <input type="text" name="Presale-rate" id="Presale-rate" class="form-control"
+                            placeholder="Enter your presale rate...">
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label">Softcap (BNB)</label>
@@ -95,7 +101,8 @@
                     </div>
                     <div class="form-group">
                         <label for="" class="form-label">Image Link</label>
-                        <input type="text" name="image" id="image" class="form-control" placeholder="Enter your logo link...">
+                        <input type="text" name="image" id="image" class="form-control"
+                            placeholder="Enter your logo link...">
                     </div>
                     <div class="form-group">
                         <button onclick="DeployPresale()" class="btn btn-primary">Deploy Presale</button>
@@ -107,15 +114,18 @@
 
     </main>
 
-
-
+    <!-- Loader -->
+    <div class="fixed hidden items-center justify-center inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto h-full w-full"
+        id="loading">
+        <img src="./public/images/load-white.gif" alt="" class="w-24">
+    </div>
 
     <!-- JS -->
-    <!-- <script src="/node_modules/particles.js/particles.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.js" integrity="sha512-BgV3bZfMmUklIZI+dP0SILdmQ0RBY2gxegFFyfgo4Ui56WhKF4Pny9LsV/l96jxDDA+2w47zAXA4IyHo2UT/Qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
-    <script>
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.6/ethers.umd.min.js"
+        integrity="sha512-za1vwN3yPBeFCjsPWyMfeHAUByvIaYevZRF81oV/kUv6D9bqZEwppA2aDsHD2vmrIf+aQrhGHt+g5+AG7EDjng=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./public/js/main.js"></script>
+    <script></script>
 </body>
 
 </html>
