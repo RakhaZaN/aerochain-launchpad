@@ -46,7 +46,7 @@
 
         <!-- Off canvas | sidebar menu -->
         <aside class="hidden sidebar-menu">
-            <nav class="relative flex flex-col py-6 px-6 w-full md:w-3/4 h-full bg-black overflow-y-auto">
+            <nav class="relative flex flex-col py-6 px-6 max-w-sm h-full bg-black overflow-y-auto">
                 <div class="flex items-center mb-4">
                     <img src="/public/images/icon.svg" alt="Logo" class="w-40" />
                     <button class="sidebar-close ml-auto">
@@ -59,15 +59,10 @@
                 </div>
                 <ul class="flex flex-col text-sm gap-y-4">
                     <li>
-                        <a class="sidebar-items" href="#">Create Token</a>
+                        <a class="sidebar-items" href="#">Home</a>
                     </li>
-                    <li class="form-group">
-                        <label for="" class="form-label">Label</label>
-                        <input type="text" name="input" id="input" class="form-control">
-                    </li>
-                    <li class="mt-12">
-                        <a class="btn btn-primary" href="#" target="_blank">Contract
-                            Audit</a>
+                    <li>
+                        <a class="sidebar-items" href="./create-token.html">Create Token</a>
                     </li>
                 </ul>
             </nav>
