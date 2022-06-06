@@ -95,7 +95,7 @@
                         class="btn btn-primary flex items-center justify-center w-fit" id="btnApprove">Approve</button>
                 </section>
 
-                <section id="signIn" class="hidden flex-col gap-8">
+                <section id="signIn" class="flex flex-col gap-8">
                     <button class="w-fit text-sm" onclick="changeToSignUp()"><i class="fas fa-angle-left"></i>
                         Back</button>
                     <div class="form-group">
@@ -168,7 +168,7 @@
                         <input type="checkbox" name="cbVesting" id="cbVesting" class="form-checkbox">
                         <label for="cbVesting" class="text-sm font-medium">Using Vesting Contributor</label>
                     </div>
-                    <div id="isVesting" class="flex flex-col gap-8">
+                    <div id="isVesting" class="hidden flex-col gap-8">
                         <div class="form-group">
                             <label for="" class="form-label">First release for presale (%)</label>
                             <input type="text" name="presale" id="presale" class="form-control" placeholder="Ex: 0">
@@ -272,6 +272,17 @@
                 dropdown.querySelector('.dropdown-button').addEventListener("click", () => {
                     dropdown.querySelector('ul').classList.toggle('hidden');
                 });
+            });
+
+            const cbVesting = document.getElementById('cbVesting');
+            cbVesting.addEventListener('change', function () {
+                // console.log(this.checked);
+                const div = document.getElementById('isVesting');
+                if (this.checked) {
+                    div.classList.replace('hidden', 'flex');
+                } else {
+                    div.classList.replace('flex', 'hidden');
+                }
             });
         });
     </script>
