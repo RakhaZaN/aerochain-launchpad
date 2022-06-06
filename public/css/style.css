@@ -510,6 +510,18 @@ nav {
   }
 }
 
+.btn-sm {
+  border-radius: 9999px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+}
+
 .btn-primary {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
   --tw-gradient-from: #4c1d95;
@@ -598,6 +610,13 @@ nav {
   outline-offset: 2px;
 }
 
+.form-checkbox {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  accent-color: #facc15;
+}
+
 .fixed {
   position: fixed;
 }
@@ -618,6 +637,10 @@ nav {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .hidden {
   display: none;
 }
@@ -626,16 +649,8 @@ nav {
   height: 3.5rem;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-full {
   height: 100%;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-fit {
@@ -656,8 +671,12 @@ nav {
   width: 6rem;
 }
 
-.max-w-2xl {
-  max-width: 42rem;
+.grow {
+  flex-grow: 1;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -666,6 +685,10 @@ nav {
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
@@ -738,6 +761,10 @@ nav {
   font-weight: 400;
 }
 
+.font-medium {
+  font-weight: 500;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -752,6 +779,10 @@ nav {
 @media (min-width: 640px) {
   .sm\:w-2\/5 {
     width: 40%;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {

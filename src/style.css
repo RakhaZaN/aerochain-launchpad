@@ -40,6 +40,9 @@
     .btn {
         @apply text-sm sm:text-xs font-semibold py-3 px-6 rounded-full text-center
     }
+    .btn-sm {
+        @apply text-xs font-semibold py-2 px-3 rounded-full text-center
+    }
     .btn-primary {
         @apply text-white bg-gradient-to-tr from-violet-900  to-orange-500 hover:bg-gradient-to-t
     }
@@ -74,6 +77,9 @@
     }
     .form-control {
         @apply px-3 py-2 text-sm w-full border border-gray-600 rounded-md bg-white bg-opacity-5 focus:bg-opacity-100 focus:text-gray-900 focus:outline-none
+    }
+    .form-checkbox {
+        @apply border border-gray-600 accent-yellow-400
     }
 
     .devider {
